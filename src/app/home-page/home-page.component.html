@@ -1,0 +1,50 @@
+<app-nav-bar></app-nav-bar>
+<html>
+<body>
+<div class="row mx-0">
+  <div class="col-sm-3 p-2">
+    <div class="card p-3">
+      <h4>Price Range</h4>
+      <hr>
+      <form>
+        <div class="radio">
+          <label><input type="radio" name="optradio" >0-499</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="optradio">500-999</label>
+        </div>
+        <div class="radio ">
+          <label><input type="radio" name="optradio" >1000-2999</label>
+        </div>
+        <div class="radio ">
+          <label><input type="radio" name="optradio" >3000 & above</label>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-sm-9 p-2 w-100">
+    <div class="card p-3" >
+      <div class="w-85 m-4 my-2 d-flex flex-wrap">
+        <div *ngFor="let a of products" class="m-4">
+
+          <div class="card bor">
+            <div class="mt-3 mx-auto">
+              <img class="card-img-top  img-fluid" src="{{a.src}}">
+              <div class="card-body">
+                <a href="#" class="card-title" style="font-size:15px;">{{a.name}}</a><br>
+                <h5 style="font-size:15px;">{{a.Price}}</h5>
+                <button  type="button" class="btn btn-primary btn-sm" (click)="goToDetails(1)">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid" style="padding: 20px; background-color: black;">
+  <div style="text-align: center;"><span style="color: gray; ">© 2019 </span><span style="color: white; ">  ShoppingBee.com</span></div>
+</div>
+</body>
+</html>
+
