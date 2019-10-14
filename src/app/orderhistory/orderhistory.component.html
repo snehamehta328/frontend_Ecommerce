@@ -1,0 +1,34 @@
+<div class="container" style="font-family: 'Open Sans', sans-serif;">
+  <h2 >Order History</h2>
+  <div class="well well-small">
+    <hr class="soften"/>
+    <table class="table table-bordered table-condensed" >
+      <thead>
+      <tr>
+        <th>Product</th>
+        <th>Description</th>
+        <th>Unit price</th>
+        <th>Qty </th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let p of cart">
+        <td><img width="100" src={{p.products.image}} ></td>
+        <td>{{p.products.name}}</td>
+        <td>Rs. {{p.products.price}}</td>
+        <td>
+          <div class="boxed">
+            {{p.quantity}}
+          </div>
+
+          <div>
+           {{p.date}}
+
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+</div>
+</div>

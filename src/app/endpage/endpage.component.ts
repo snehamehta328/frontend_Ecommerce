@@ -8,7 +8,7 @@ import {AppService} from "../app.service";
   styleUrls: ['./endpage.component.scss']
 })
 export class EndpageComponent implements OnInit {
-
+cart;
   constructor(private router:Router,private appservice:AppService) { }
 
   ngOnInit() {

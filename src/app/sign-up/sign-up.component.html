@@ -73,17 +73,17 @@
   <h2>SignUp</h2>
   <form action="">
     <p>Your Name</p>
-    <input type="text" name="name" id="name" placeholder="Enter your name here">
+    <input type="text" name="name" id="name" placeholder="Enter your name here"  [(ngModel)]="yourname">
     <p>Your Email</p>
-    <input type="text" name="email" id="email" placeholder="Enter your email here">
+    <input type="text" name="email" id="email" placeholder="Enter your email here" [(ngModel)]="email">
     <p>Your Username</p>
     <input type="text" name="username" id="username" placeholder="Enter your username here" required [(ngModel)]="username">
     <p>Password</p>
     <input type="password" name="password" id="password" placeholder="Enter your password" required [(ngModel)]="password">
     <p>Your Phone Number </p>
-    <input type="text" name="mobile" id="mobile" placeholder="Enter your contact number here">
+    <input type="text" name="mobile" id="mobile" placeholder="Enter your contact number here" required [(ngModel)]="phone">
 <!--    <button type="button" class="btn btn-primary btn-lg btn-block login-button"  routerLink="/homepage" >Register</button>-->
-    <button type="button" class="btn btn-primary btn-lg btn-block login-button"  routerLink="/homepage" (click)="goTosignUp()">Register</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block login-button"   (click)="goTosignUp()">Register</button>
   </form>
 </div>
 </body>

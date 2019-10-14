@@ -75,4 +75,17 @@ checkout()
   return this.httpClient.get('http://localhost:4040/cart/checkout/recieve',{headers});
 }
 
+  getOrder()
+  {
+    const token=sessionStorage.getItem('token');
+   // console.log(token);
+    const headers=new HttpHeaders({Authorization:'Basic '+token});
+    return this.httpClient.get('http://localhost:4040/order/orders',{headers});
+  }
+  totalPrice()
+  {
+    const token=sessionStorage.getItem('token');
+    const headers=new HttpHeaders({Authorization:'Basic '+token});
+    return this.httpClient.get('http://localhost:4040/cart/price',{headers});
+  }
 }

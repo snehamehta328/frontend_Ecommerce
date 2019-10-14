@@ -13,6 +13,7 @@ import {FormsModule} from "@angular/forms";
 import { MyprofileComponent } from './myprofile/myprofile.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { EndpageComponent } from './endpage/endpage.component';
+import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { EndpageComponent } from './endpage/endpage.component';
     UserCartComponent,
     MyprofileComponent,
     MainpageComponent,
-    EndpageComponent
+    EndpageComponent,
+    OrderhistoryComponent
   ],
   imports: [
     BrowserModule,
