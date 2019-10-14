@@ -8,7 +8,12 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserCartComponent } from './user-cart/user-cart.component';
-import { ProductInformationComponent } from './product-information/product-information.component';
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+import { MyprofileComponent } from './myprofile/myprofile.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
+import { EndpageComponent } from './endpage/endpage.component';
+
 
 @NgModule({
   declarations: [
@@ -19,11 +24,15 @@ import { ProductInformationComponent } from './product-information/product-infor
     ProductDetailsComponent,
     SignUpComponent,
     UserCartComponent,
-    ProductInformationComponent
+    MyprofileComponent,
+    MainpageComponent,
+    EndpageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

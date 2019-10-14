@@ -1,40 +1,21 @@
 <html>
 <body>
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card">
-        <div class="card-header">Login</div>
-        <div class="card-body">
-          <form class="form-horizontal" method="post" action="#">
-            <div class="form-group">
-              <label for="email" class="cols-sm-2 control-label">Your Email</label>
-              <div class="cols-sm-10">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                  <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" />
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="password" class="cols-sm-2 control-label">Password</label>
-              <div class="cols-sm-10">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                  <input type="password" class="form-control" name="password" id="password" placeholder="Enter your Password" />
-                </div>
-              </div>
-            </div>
-            <div class="form-group ">
-              <button type="button" class="btn btn-primary btn-lg btn-block login-button"  routerLink="/homepage">Login</button>
-            </div>
-          </form>
-        </div>
-
-      </div>
+<img src="assets//ecommerce1.jpg" class="imagee">
+<div class="form-area" style="font-family: 'Open Sans', sans-serif;">
+  <h2>Login</h2>
+  <form action="">
+    <p>Username</p>
+    <input type="text" name="username" id="username" placeholder="Your Username" [(ngModel)]="username">
+    <p>Password</p>
+    <input type="password" name="password`" id="password" placeholder="Your password" [(ngModel)]="password">
+    <button type="button" class="btn btn-primary btn-lg btn-block login-button" (click)="login()">Login</button>
+    <a href="#">Forgot Password?
+    </a>
+    <div>
+      <a routerLink="/signup">Don't have an account?
+      </a>
     </div>
-  </div>
+  </form>
 </div>
-<br>
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 <html>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="font-family: 'Open Sans', sans-serif;">
@@ -12,7 +11,7 @@
     <input type="text" class="form-control" placeholder="What you're looking for?" aria-label="Recipient's username" aria-describedby="basic-addon2">
   </div>
   <div class="input-group-append">
-    <button type="button" class="btn btn-secondary">Search</button>
+    <button type="button" class="btn btn-secondary" style="margin-top:-10px;">Search</button>
   </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -34,57 +33,11 @@
       <li class="nav-item">
         <a class="nav-link" href="#" routerLink="/signup">Signup</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="showCart()">Cart</a>
+      </li>
     </ul>
   </div>
 </nav>
 <br>
-<div class="container" style="font-family: 'Open Sans', sans-serif;">
-  <h2 >Shopping Bag</h2>
-  <div class="well well-small">
-    <hr class="soften"/>
-    <table class="table table-bordered table-condensed" >
-      <thead>
-      <tr>
-        <th>Product</th>
-        <th>Description</th>
-        <th>Unit price</th>
-        <th>Qty </th>
-<!--        <th>Total</th>-->
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let p of cart">
-        <td><img width="100" src={{p.products.image}} ></td>
-        <td>{{p.products.name}}</td>
-        <td>Rs. {{p.products.price}}</td>
-        <td>
-<div class="boxed">
-  {{p.quantity}}
-</div>
-
-          <div class="input-append">
-            <button class="btn btn-mini" type="button" (click)="decreaseproduct(p.products.productId)">-</button>
-
-            <button class="btn btn-mini" type="button" (click)="increaseproduct(p.products.productId)">+</button>
-            <button class="btn btn-mini btn-danger" type="button" (click)="deleteProduct(p.products.productId)">Remove</button>
-<!--            <span class="icon-remove"></span>-->
-          </div>
-        </td>
-<!--       <td>Rs. {{total}}-->
-<!--        <div>-->
-<!--          <button (click)="checkOut()">Pay</button>-->
-<!--        </div>-->
-<!--        </td>-->
-      </tr>
-      </tbody>
-    </table>
-    <div>
-      <button (click)="checkOut()">Total</button>
-      Rs.{{total}}
-      <button (click)="clearcart()" routerLink="/endpage">checkout</button>
-    </div>
-  </div>
-</div>
-</body>
-</html>
-
+<h1>Thankyou for Shopping With Us!</h1>
