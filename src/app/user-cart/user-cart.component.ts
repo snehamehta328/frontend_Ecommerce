@@ -19,7 +19,7 @@ total;
   ngOnInit() {
     return this.service.showCart().subscribe((data) => {
       this.cart=data;
-      this.totalPrice();
+      this.findtotal();
     });
   }
   showClothing()
@@ -61,7 +61,7 @@ total;
     this.service.deleteProduct(did).subscribe((data) =>{
       this.service.showCart().subscribe((data6) => {
         this.cart=data6;
-        this.totalPrice();
+        this.findtotal();
       });
     });
   }
@@ -70,7 +70,7 @@ total;
     this.service.removeproduct(rid).subscribe((data) => {
       this.service.showCart().subscribe((data2) => {
         this.cart=data2;
-        this.totalPrice();
+        this.findtotal();
       });
     });
   }
@@ -79,7 +79,7 @@ total;
     this.service.addProductToCart(aid).subscribe((data) => {
       this.service.showCart().subscribe((data3) => {
         this.cart=data3;
-        this.totalPrice();
+        this.findtotal();
       });
     });
   }
@@ -119,5 +119,14 @@ total;
     this.service.totalPrice().subscribe((data) =>{
       this.total=data;
     });
+  }
+  findtotal()
+  {
+    this.total=0;
+    for(let i=0;i<this.cart.length;i++)
+    {
+      this.total+=this.cart[i].products.price*this.cart[i].quantity;
+    }
+    console.log(this.total);
   }
 }

@@ -11,12 +11,12 @@ export class HttpService {
   {
     const token=sessionStorage.getItem('token');
     const headers=new HttpHeaders({Authorization:'Basic '+token});
-    return this.http.get('http://localhost:4040/api/prodetails',{headers});
+    return this.http.get('http://localhost:4030/api/prodetails',{headers});
   }
   getItemById(id)
   {
     const token=sessionStorage.getItem('token');
     const headers=new HttpHeaders({Authorization:'Basic '+token});
-    return this.http.get('http://localhost:4040/api/prodetails/'+id,{headers});
+    return this.http.get('http://localhost:4030/api/prodetails/'+id,{headers});
   }
 }

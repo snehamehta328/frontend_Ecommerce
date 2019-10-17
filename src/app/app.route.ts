@@ -8,6 +8,7 @@ import {MainpageComponent} from "./mainpage/mainpage.component";
 import {EndpageComponent} from "./endpage/endpage.component";
 import {MyprofileComponent} from "./myprofile/myprofile.component";
 import {OrderhistoryComponent} from "./orderhistory/orderhistory.component";
+import {AddeditproductComponent} from "./addeditproduct/addeditproduct.component";
 
 export const MAIN_ROUTES:Routes=[
   { path: 'login', component: LoginComponent },
@@ -19,6 +20,7 @@ export const MAIN_ROUTES:Routes=[
   {path:'endpage',component:EndpageComponent},
   {path:'myprofile',component:MyprofileComponent},
   {path:'orderhistory',component:OrderhistoryComponent},
+  {path:'addProduct',component:AddeditproductComponent},
   { path:'', redirectTo:'/login', pathMatch:'full'},
   {path:'**',component:LoginComponent}
 ];

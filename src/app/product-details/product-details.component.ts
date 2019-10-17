@@ -34,4 +34,14 @@ product;
     this.service.addProductToCart(pId).subscribe((data) => {
     });
   }
+  edit(productId)
+  {
+    this.appservice.edit(true);
+    this.router.navigate(['/addProduct'],{
+      relativeTo:this.activatedRoute,
+      queryParams:{
+        id:productId
+      }
+    });
+  }
 }

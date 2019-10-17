@@ -14,6 +14,7 @@ import { MyprofileComponent } from './myprofile/myprofile.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { EndpageComponent } from './endpage/endpage.component';
 import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
+import { AddeditproductComponent } from './addeditproduct/addeditproduct.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
     MyprofileComponent,
     MainpageComponent,
     EndpageComponent,
-    OrderhistoryComponent
+    OrderhistoryComponent,
+    AddeditproductComponent
   ],
   imports: [
     BrowserModule,

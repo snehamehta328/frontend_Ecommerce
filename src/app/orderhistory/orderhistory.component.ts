@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {GetUserService} from "../get-user.service";
+import {Router} from "@angular/router";
+import {AppService} from "../app.service";
 
 @Component({
   selector: 'app-orderhistory',
@@ -8,12 +10,21 @@ import {GetUserService} from "../get-user.service";
 })
 export class OrderhistoryComponent implements OnInit {
 cart;
-  constructor(private service: GetUserService) { }
+  constructor(private service: GetUserService,private router:Router,private appservice:AppService) { }
 
   ngOnInit() {
     return this.service.getOrder().subscribe((data) => {
       this.cart = data;
     });
+  }
+  showCart()
+  {
+    this.router.navigate(['/cart']);
+  }
+  logout()
+  {
+    this.appservice.isLoggedin(false);
+    this.router.navigate(['login']);
   }
 
 }

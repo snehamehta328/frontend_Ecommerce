@@ -25,8 +25,18 @@ export class AppService {
     }
     signup(user)
     {
-      return this.httpClient.post('http://localhost:4040/login/addUser' ,user).subscribe(res=>
+      return this.httpClient.post('http://localhost:4030/login/addUser' ,user).subscribe(res=>
       this.router.navigate(['login']));
     }
+    edit(bool:boolean)
+    {
+      localStorage.setItem('edit', String(bool));
+      return bool;
+    }
+    // checkEdit()
+    // {
+    //   const edit=localStorage.getItem('edit');
+    //   return JSON.parse(edit);
+    // }
   }
 

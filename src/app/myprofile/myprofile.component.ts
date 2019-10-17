@@ -17,7 +17,7 @@ myp;
 
   constructor(private http:HttpClient,private authService:AuthenticationService, private router:Router, private appservice:AppService,private abc:MyProfileService) { }
 disabled=true;
-  url='http://localhost:4040/profile/update';
+  url='http://localhost:4030/profile/update';
   ngOnInit() {
     this.abc.getProfile().subscribe(data =>
     {

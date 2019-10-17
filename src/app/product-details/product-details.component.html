@@ -28,13 +28,16 @@
         <a class="nav-link" href="#" routerLink="/homepage">Home</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="#" routerLink="/myprofile">My Profile</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#" (click)="logout()">Logout</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#" routerLink="/signup">Signup</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" (click)="showCart()">Cart</a>
+        <a class="nav-link" href="#"(click)="showCart()">Cart</a>
       </li>
     </ul>
   </div>
@@ -44,7 +47,7 @@
   <div class="card-group">
     <div class="card bg-light">
       <div class="card-body text-center">
-        <img class="styling" style="height:400px;width:300px;" src="{{product.image}}">
+        <img src="{{product.image}}" class="styling" style="height:400px;width:300px;" >
       </div>
     </div>
     <div class="card bg-light">
@@ -58,6 +61,8 @@
         <button  type="button" class="btn btn-primary btn-sm" (click)="addProduct(product.productId)">Add to Cart</button>
         <br><br>
         <button  type="button" class="btn btn-primary btn-sm" (click)="showCart()">Go to Cart</button>
+        <button  type="button" class="btn btn-primary btn-sm" (click)="edit(product.productId)">edit</button>
+
       </div>
     </div>
   </div>

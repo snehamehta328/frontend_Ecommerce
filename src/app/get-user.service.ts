@@ -17,62 +17,62 @@ export class GetUserService
   {
     const token=sessionStorage.getItem('token');
     const headers=new HttpHeaders({Authorization:'Basic '+token});
-    return this.httpClient.get('http://localhost:4040/api/prodetails',{headers});
+    return this.httpClient.get('http://localhost:4030/api/prodetails',{headers});
   }
   getProductsByRange(price1,price2)
   {
     const token=sessionStorage.getItem('token');
     const headers=new HttpHeaders({Authorization:'Basic '+token});
-    return this.httpClient.get('http://localhost:4040/api/getProductsByPrice/'+price1+'/between/'+price2,{headers});
+    return this.httpClient.get('http://localhost:4030/api/getProductsByPrice/'+price1+'/between/'+price2,{headers});
   }
   getProductsByCategory(category: string)
   {
     const token=sessionStorage.getItem('token');
     const headers=new HttpHeaders({Authorization:'Basic '+token});
-    return this.httpClient.get('http://localhost:4040/api/getProductsByCategory/'+category,{headers});
+    return this.httpClient.get('http://localhost:4030/api/getProductsByCategory/'+category,{headers});
   }
   getById(id)
   {
     const token=sessionStorage.getItem('token');
     const headers=new HttpHeaders({Authorization:'Basic '+token});
-    return this.httpClient.get('http://localhost:4040/api/par/'+id,{headers});
+    return this.httpClient.get('http://localhost:4030/api/par/'+id,{headers});
 }
   addProductToCart(productid)
   {
     console.log(productid);
     const token= sessionStorage.getItem('token');
   const headers=new HttpHeaders({Authorization:'Basic '+token});
-  return this.httpClient.get('http://localhost:4040/cart/addproduct/recieve/' + productid, {headers});
+  return this.httpClient.get('http://localhost:4030/cart/addproduct/recieve/' + productid, {headers});
 }
 removeproduct(prodid)
 {
   const token= sessionStorage.getItem('token');
   const headers=new HttpHeaders({Authorization:'Basic '+token});
-  return this.httpClient.get('http://localhost:4040/cart/removeproduct/recieve/' + prodid, {headers});
+  return this.httpClient.get('http://localhost:4030/cart/removeproduct/recieve/' + prodid, {headers});
 }
 deleteProduct(did)
 {
   const token= sessionStorage.getItem('token');
   const headers=new HttpHeaders({Authorization:'Basic '+token});
-  return this.httpClient.get('http://localhost:4040/cart/deleteproduct/recieve/' + did, {headers});
+  return this.httpClient.get('http://localhost:4030/cart/deleteproduct/recieve/' + did, {headers});
 }
 showCart()
 {
   const token= sessionStorage.getItem('token');
   const headers=new HttpHeaders({ Authorization:'Basic '+token});
-  return this.httpClient.get('http://localhost:4040/cart/showcart/recieve' , {headers});
+  return this.httpClient.get('http://localhost:4030/cart/showcart/recieve' , {headers});
 }
 clearCart()
 {
   const token= sessionStorage.getItem('token');
   const headers=new HttpHeaders({Authorization:'Basic '+token});
-  return this.httpClient.get('http://localhost:4040/cart/clearcart' , {headers});
+  return this.httpClient.get('http://localhost:4030/cart/clearcart' , {headers});
 }
 checkout()
 {
   const token=sessionStorage.getItem('token');
   const headers=new HttpHeaders({Authorization:'Basic '+token});
-  return this.httpClient.get('http://localhost:4040/cart/checkout/recieve',{headers});
+  return this.httpClient.get('http://localhost:4030/cart/checkout/recieve',{headers});
 }
 
   getOrder()
@@ -80,12 +80,26 @@ checkout()
     const token=sessionStorage.getItem('token');
    // console.log(token);
     const headers=new HttpHeaders({Authorization:'Basic '+token});
-    return this.httpClient.get('http://localhost:4040/order/orders',{headers});
+    return this.httpClient.get('http://localhost:4030/order/orders',{headers});
   }
   totalPrice()
   {
     const token=sessionStorage.getItem('token');
     const headers=new HttpHeaders({Authorization:'Basic '+token});
-    return this.httpClient.get('http://localhost:4040/cart/price',{headers});
+    return this.httpClient.get('http://localhost:4030/cart/price',{headers});
+  }
+  addProduct(data)
+  {
+    const token=sessionStorage.getItem('token');
+    console.log(token);
+    const headers=new HttpHeaders({Authorization:'Basic '+token});
+    return this.httpClient.post("http://localhost:4030/api/insert",data,{headers});
+  }
+  editProduct(id,data)
+  {
+    const token=sessionStorage.getItem('token');
+    console.log(token);
+    const headers=new HttpHeaders({Authorization:'Basic '+token});
+    return this.httpClient.put("http://localhost:4030/api/produc/"+id,data,{headers});
   }
 }

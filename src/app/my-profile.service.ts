@@ -11,7 +11,7 @@ export class MyProfileService {
   {
     const token=sessionStorage.getItem('token');
     const headers=new HttpHeaders({Authorization:'Basic '+token});
-    const url='http://localhost:4040/profile/get';
+    const url='http://localhost:4030/profile/get';
     return this.http.get(url, {headers});
   }
 }
