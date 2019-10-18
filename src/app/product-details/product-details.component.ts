@@ -33,6 +33,7 @@ product;
   {
     this.service.addProductToCart(pId).subscribe((data) => {
     });
+    alert('Product added to cart');
   }
   edit(productId)
   {

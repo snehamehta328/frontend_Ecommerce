@@ -103,9 +103,7 @@ total;
   // }
   clearcart()
   {
-
     this.service.clearCart().subscribe((data) => {
-
     });
     this.router.navigate(['/endpage']);
   }

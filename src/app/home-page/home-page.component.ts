@@ -71,6 +71,7 @@ addProduct(pId)
 {
   this.service.addProductToCart(pId).subscribe((data) => {
   });
+  alert('Product added to cart');
 }
 showCart()
 {
